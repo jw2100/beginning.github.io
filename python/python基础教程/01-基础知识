@@ -1,0 +1,33 @@
+
+除法： import __future__ from division  1/2 = 1.0/2   1//2 才是正整数
+注：__future__ 将来会成为标准的库
+
+长整数： python3中 只有int(支持无限长)  没有长整型L
+
+输入： python3中，只有input 无 raw_input
+
+pow(2,3) = 2**3 = 8
+abs(-2)  = 2
+round() 四舍五入
+math.ceil()  : 上界整数
+math.floor() : 下界整数
+
+cmath.sqrt(-1) : complex math 复数 (1+3j) * (9+4j)
+
+
+之间执行或者双击执行：文件开头加：#!/usr/bin/python
+
+
+注释：用 # 开头
+
+字符串拼接 x+y
+
+
+str() : 转换为用户可以理解的字符串
+repr(): 合法的python表达式 == ·· python3 不再使用反引号
+
+
+多行字符串：1、开头和结尾用 三个'''单引号
+            2、用反斜杠 \
+原始字符串：a = r'a\b\c' 不做任何转义
+Unicode     a = u'Hello, world'
