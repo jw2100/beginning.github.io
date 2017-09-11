@@ -25,7 +25,7 @@ k in d, 检查k是否在d中
 字典方法：
 d.clear() : 原地操作，无返回值
 y=x.copy() : 浅拷贝，y的改变不影响x
-y=x.deepcopy(): 深拷贝,y的改变影响x
+y=deepcopy(x): 深拷贝,y的改变影响x
 dict.fromkeys(['a','b']) = {'a' : None, 'b' : None} : 使用key建立空值词典
 dick.formkeys([a]).'un'  = {'a' : 'un'}
 d.get('name', None) : 如果name不存在，则返回None

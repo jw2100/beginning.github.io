@@ -1,0 +1,49 @@
+
+print(语句1，语句2) 多个语句用逗号隔开
+
+导入多个模块： 
+	from somemodel import * == from somemodel import one, two,three
+
+from math import sqrt as mysqrt
+
+赋值：
+	序列解包: x,y = 1,2   x,y=y,x交互，val = 1，2，3
+			函数或者方法返回元组(其他序列),比较有用
+			val = {"a":1, "b":2}  key,value = val.popitem();
+			左右数量不相等(除左侧一个)会报错，除非 x,*y = 1,2,3 y=[2,3]
+	链式赋值：x=y=1
+	增量赋值：x+=1
+
+python中 冒号表示块的开始，块中缩进一样
+
+False = None、0、 "" 、() 、[] 、 {}
+
+if:
+elif:
+else:
+
+x is y: 是否是同一个对象
+字符串大小按照字母顺序比较
+and or 
+
+断言： asset 0 < age < 10
+
+循环：while and for；尽量用for
+	for item in list/range(1,2,3):
+	遍历字典：for key in dict:
+			  for key, value in dict.items():
+	可以把两个list压缩为元祖  zip(list1, list2),然后循环 (保留最短的list)
+
+break
+continue
+
+pass 不做任何
+del  删除对象
+
+exec/eval ： 执行存储在字符串中的代码
+exec 'sqrt = 1' in scope #把sqrt=1放在scope里面，防止下面sqrt(4)错误
+
+chr(n):返回n所代表的包含一个字符的字符串
+ord(c):返回单个字符的整形值
+zip() : 创建并行迭代新序列
+range(start, stop, step):整形序列

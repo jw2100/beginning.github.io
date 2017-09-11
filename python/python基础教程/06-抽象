@@ -1,0 +1,19 @@
+
+y=math.sqrt callable(q)：判断函数是否可调用，已被hasattr（func, __call__）取代
+
+
+def 定义函数
+
+传递参数是实际传的是浅拷贝，函数里的改变，会影响外面，类似于 p=list赋值，list改变影响p; 为了防止影响，可以用深拷贝 p=list[:]; 但是只会影响参数，不会影响其他变量的改变
+
+可以使用参数关键字指定参数 hell('a' = 1, 'b'=2) === hell('b'=2, 'a'=1)
+
+收集参数
+params(a, *par, **param), params(a=1, 1,2,3, x=1,y=2) par= (1,2,3),param={x=1,y=2}
+
+vars() : 返回不可修改的字典,
+
+函数式编程：
+map(func, list):列表中每个函数
+filter(func, list)：返回为真的 filter(lambda x : x is lower(), seq)
+reduce(func, list):对每个进行处理
