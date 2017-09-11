@@ -1,0 +1,28 @@
+字符串是不可变的 str[3] = 'x' is wrong
+
+str = "hello %s" ('world')  如果格式化的值不是字符串，%s会强制变为字符串
+
+模板字符串：
+	from string import Template
+	s = Template('${x} is $ting')
+	d[x] = 'a'
+	d[ting] = 'b'
+	s.substitue(d)
+
+格式化：%字符 + 转换标志 + 最小字段宽度 + 精度 + 转换类型  （略，用到再查）
+
+string.digits string.letters大小写  string.lowercase 
+string.printable所有  string.punctuation包含所有标点字符  
+
+
+str = '123abcd'
+find：返回所在位置的最左端索引 str.find('abc') = 3
+lower: str.lower(), islower, swapcase()
+replace:  str.replace('ab', 'xx') = '123xxcd'
+join  : 链接字符串split逆方法 [1,2,3].join('+') = '1+2+3'
+split : 分割 '1+2+3'.split('+') = [1,2,3]
+strip:  默认去除空格  str.strip('d') = '123abc'  lstrip()  rstrip()
+translate:替换单个字符
+string.maketrans(from, to)
+
+

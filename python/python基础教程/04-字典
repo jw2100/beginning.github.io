@@ -1,0 +1,41 @@
+dict
+
+字典是唯一的内建映射类型，字典的值没有顺序,key可以是任意不可变类型
+
+创建：phone = {'li' : 'a'}
+
+dict():
+	dict( [('li','we'), ('1', '2')] ) = {'li' : 'wen', '1' : 2}
+	dict('name'='li')
+
+len(d) : 数量
+d[k] 
+d[k] = v  复制
+del d[k]  删除
+k in d, 检查k是否在d中
+
+字典格式化字符串：
+	str = '''
+			it is %(begin)s
+			%(end)s
+		  ''' % {'begin' : 'ok', 'end' : 'err'}
+	str = 'it is ok err';
+
+
+字典方法：
+d.clear() : 原地操作，无返回值
+y=x.copy() : 浅拷贝，y的改变不影响x
+y=x.deepcopy(): 深拷贝,y的改变影响x
+dict.fromkeys(['a','b']) = {'a' : None, 'b' : None} : 使用key建立空值词典
+dick.formkeys([a]).'un'  = {'a' : 'un'}
+d.get('name', None) : 如果name不存在，则返回None
+d.has_key() 【3.0已弃用】
+d.items(),返回list，list每一项是元组
+d.iteritems()
+d.keys()
+d.pop(key) 弹出key对应的值
+d.popitem()  随机的弹出最后一个
+d.setdefault(key,v),key不存在返回默认值v，并更新字典，key存在，返回对应的值
+d.update(x):用词典x更新词典d，d中没有x，则插入
+d.values() / d.itervalues()
+
