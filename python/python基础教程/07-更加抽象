@@ -1,0 +1,12 @@
+面向对象： 多态+封装+继承
+
+type isinstance 显示类型检查 破坏多态
+
+__metaclass__ = type # 确定使用新类型类
+
+
+指定超类：class childclass（base）： 括号里指定超类 ,多个超类，用逗号分隔--多重继承（先继承的方法覆盖后继承的方法）
+
+issubclass(childclass, base)
+childclass.__bases__
+

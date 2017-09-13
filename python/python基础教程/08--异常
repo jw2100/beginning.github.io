@@ -1,0 +1,30 @@
+raise Exception("")  :抛出异常
+
+Exception
+AttributeError  特性引用或者赋值失败
+IOError
+IndexError
+KeyError
+NameError
+SyntaxError
+TypeError
+ValueError
+ZeroDivisionError
+
+***表示上面的异常类型
+try:
+	'''
+except ***:
+ 	'''
+except ***
+
+
+try 
+	'''
+except (***, ***) as e:
+	'''
+	print(repr(e))
+	traceback.print_exc(e)
+else:
+	'''
+finally:

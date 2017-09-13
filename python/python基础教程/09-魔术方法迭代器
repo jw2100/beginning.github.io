@@ -1,0 +1,76 @@
+双下化线开始的名字是 魔术方法 __init__()
+
+双下滑线不能被外部访问，可实现private
+
+
+构造方法：__init__(self)
+
+首先构造父类方法，否则不能调用父类方法 :: 
+	superclass.__init__(self) / super(superclass.self).__init__() 【*args】
+
+
+__len__(self):项目数量
+__getitem__(self.key)
+__setitem__(self.key, value)
+__delitem__(self.key)
+__len__(self)
+
+
+python能隐藏访问器方法：  property()
+size = property(getSize, setSize)
+
+静态方法：
+	方法上面加  @staticmethod
+类方法：
+@classmethod
+def cmethod(cls) : cls类似于self
+
+#name是一个特性
+__getattribute__(self, name) # 新类型
+__getattr__(self, name) 当特性name被访问&对象没有相应特性时，调用
+__setattr__(self, name, value)
+__delattr__(self, name)
+
+class Rec:
+	def __getattr__(self, name) :
+		if name == 'size':
+			print(1)
+		else:
+			raise AttributeError
+
+---------------------------------------------------------
+
+迭代器：__iter__()方法返回一个迭代器,具有next()方法, 新：__next__
+list L  it = iter(L)  a = next(it)
+可以自己写类实现一个iter和next方法
+
+------------------------------------------------------
+
+生成器：包含yield的函数成为生成器，
+def faltter(nest):
+	for sub in nest:
+		yield sub # 函数被调用时，会停在这里,等待被唤醒(不像return那样返回,每次产生多个值)
+list(faltter[1,23])
+
+多层循环:
+	def faltter(nest):
+		try:
+			for sub in nest:
+				for ele in sub:
+					yield ele
+		except TypeError:
+			yield nest
+
+生成器方法：
+	send()返回发送的值, next(), throw() close()
+
+	def repeat(val):
+		while True:
+			new = (yield value)
+			if new is not None:
+				value = new
+	r = repeat(42)
+	r.next()
+	42
+	r.send('H')
+	H
