@@ -1,0 +1,66 @@
+任何程序都是模块
+
+sys.path.append('绝对路径') 增加搜索位置
+sys.path.expanduser('相对路径')
+
+pyc是经编译后的与平台无关的文件，pyc会随着py改变而改变
+
+
+多次导入只会第一次生效（导入自动执行程序,加入==__main__），这对两个模块相互导入相当有帮助（否则死循环），可以使用reload重新导入
+
+
+设置查找路径：
+	1、将模块放在合适的位置，
+		pprint.pprint(sys.path) 可以将自己包放在合适的目录在(site-packages)
+	2、告诉编译器去哪里找 sys.path.append 或者修改bashrc中的PYTHONPATH
+
+包，将模块组织成为包(另一类模块),包是模块所在的目录
+为了让python将其作为包对待，需包含一个__init__.py的文件
+
+~/python                       PATHONPATH
+~/python/dring                 包目录
+~/python/dring/__init__.py     包代码
+~/python/dring/a.py            a模块
+~/python/dring/b.py            b模块
+
+import dring  #只能用__init__.py
+import dring.a #使用a模块
+from dring import b
+_________________________________________________________________________________
+
+查看模块内容：
+
+1、dir
+	for n in dir(模块):
+		if not n.startswith("_"): # 以_开头的默认不给外部使用
+2、模块.__all__
+
+
+3、help(模块.方法)
+
+4、模块.方法.__doc__
+
+5、查看源代码:  模块.方法.__file__
+
+______________________________________________________________________________
+
+
+sys:标准库（与python解析器）：
+argv           sys.argv传入参数个数
+exit([argv)
+modules   映射模块名字到载入模块的字典 sys.modules
+path
+platform   运行的平台名称
+stdin
+stdout
+stderr
+
+os标准库(操作系统服务)：
+environ  环境变量映射  os.environ['PYTHONPATH'] = '' 可以修改
+system(command)   execv  popen subprocess
+sep 路径分割
+pathsep
+linesep 行分割符
+urandom(m) m字节加密强随机数据
+
+
